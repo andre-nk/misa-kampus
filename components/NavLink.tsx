@@ -13,7 +13,7 @@ export default function NavLink({
   return (
     <Link
       href={link.toString()}
-      className="group capitalize font-bold"
+      className="group capitalize"
       passHref
     >
       <p

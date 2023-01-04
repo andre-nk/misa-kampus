@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="debug-screens scroll-smooth">
+      <body className="debug-screens">
         <Header />
         {children}
         <Footer />
