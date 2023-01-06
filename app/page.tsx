@@ -2,11 +2,14 @@ import React from "react";
 import Image from "next/image";
 import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import ProgramCard from "../components/ProgramCard";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import MoreProgramButton from "../components/MoreProgramButton";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <main className="mb-8 debug-screens">
+    <main className="mb-8">
       {/*Hero*/}
       <div className="relative">
         <div className="w-full h-full flex flex-col lg:flex-row-reverse items-center absolute top-0 z-20 px-12 lg:px-24">
@@ -59,10 +62,7 @@ export default function Home() {
             <ProgramCard index={i} key={i} />
           ))}
         </div>
-        <button className="flex items-center transition-transform duration-200 hover:scale-105 bg-primary text-light w-fit px-5 py-2.5 mt-8 rounded-lg space-x-4">
-          <p>LIHAT SEMUA</p>
-          <ArrowRightIcon className="h-4" />
-        </button>
+        <MoreProgramButton />
       </div>
     </main>
   );
